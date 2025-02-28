@@ -24,6 +24,9 @@ const PORT = 3000 || process.env.PORT;
 app.use("/vendor", vendorRoutes);
 app.use("/firm", firmRoutes);
 app.use("/product",productRoutes);
+app.use("/home",(req,res)=>{
+    res.send("<h1>Hlo welcome to backend</h1>")
+})
 app.listen(PORT, (req, res) => {
   console.log("server is running on ", PORT);
 });
